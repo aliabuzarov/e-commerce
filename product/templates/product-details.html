@@ -1,0 +1,151 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+  <title>Product Details | E-commerce</title>
+{% endblock %}
+
+{% block content %}
+  <!-- Start Product -->
+  <div class="cs-accent_7_bg_2">
+    <div class="cs-height_140 cs-height_lg_80"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="cs-slider_for_1 cs-accent_20_bg_2">
+            <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_1.png'%}" alt=""></div>
+            <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_2.png'%}" alt=""></div>
+            <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_3.png'%}" alt=""></div>
+            <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_4.png'%}" alt=""></div>
+          </div>
+          <div class="cs-slider_nav_1">
+            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_1.png'%}" alt="Thumb"></div>
+            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_2.png'%}" alt="Thumb"></div>
+            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_3.png'%}" alt="Thumb"></div>
+            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_4.png'%}" alt="Thumb"></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="cs-height_50 cs-height_lg_40"></div>
+          <div class="cs-product_details cs-style1">
+            <h2 class="cs-bold m-0">Bluetooth Headset</h2>
+            <div class="cs-height_10 cs-height_lg_10"></div>
+            <div class="cs-product_review">
+              <div class="cs-review" data-review="4.5">
+                <div class="cs-review_in"></div>
+              </div>
+              <span>(5 cutomer reviews)</span>
+            </div>
+            <div class="cs-height_10 cs-height_lg_10"></div>
+            <hr class="w-50 cs-accent_20_bg_2">
+            <div class="cs-height_25 cs-height_lg_25"></div>
+            <div class="cs-product_price cs-semi_bold cs-accent_color_2 cs-primary_font">$50 <span class="cs-previous cs-secondary_color">$100</span></div>
+            <div class="cs-height_15 cs-height_lg_15"></div>
+            <div class="cs-product_desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
+            <div class="cs-height_25 cs-height_lg_25"></div>
+            <hr class="w-50 cs-accent_20_bg_2">
+            <div class="cs-height_30 cs-height_lg_30"></div>
+            <div class="cs-product_color_varient">
+              <h4>Color</h4>
+              <div class="cs-shop_colors">
+                <span class="cs-color1"></span>
+                <span class="cs-color2 active"></span>
+                <span class="cs-color3"></span>
+                <span class="cs-color4"></span>
+              </div>
+            </div>
+            <div class="cs-height_30 cs-height_lg_30"></div>
+            <div class="cs-quantity_wrap">
+              <div class="cs-quantity cs-style1 cs-accent_40_border_2">
+                <button class="cs-quantity_btn cs-center cs-accent_color_2 cs-accent_10_bg_2 cs-white_hover cs-accent_bg_2_hover"><i class="fas fa-minus"></i></button>
+                <input type="text" value="1" class="cs-quantity_number">
+                <button class="cs-quantity_btn cs-center cs-accent_color_2 cs-accent_10_bg_2 cs-white_hover cs-accent_bg_2_hover"><i class="fas fa-plus"></i></button>
+              </div>
+              <a href="#" class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg_2 cs-accent_border_2 cs-white cs-accent_bg_hover cs-white_hover cs-accent_border_hover">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-height_65 cs-height_lg_40"></div>
+    <div class="container">
+      <div class="cs-tabs cs-fade_tabs cs-style1">
+        <ul class="cs-tab_links cs-style2 cs-mp0 cs-primary_font cs-medium">
+          <li class="active"><a href="#tab_one">Description</a></li>
+          <li><a href="#tab_two">Additional Info</a></li>
+          <li><a href="#tab_three">Reviews</a></li>
+        </ul>
+        <div class="cs-tab_content">
+          <div id="tab_one" class="cs-tab active">
+            <div class="cs-product_tab cs-style1 cs-accent_20_bg_2">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              <ul>
+                <li><i class="fas fa-check cs-center cs-accent_15_bg_2 cs-accent_color_2 cs-rounded"></i>Simple product option, easy to use</li>
+                <li><i class="fas fa-check cs-center cs-accent_15_bg_2 cs-accent_color_2 cs-rounded"></i>Modern and useful product</li>
+              </ul>
+              <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+            </div>
+          </div><!-- .cs-tab -->
+          <div id="tab_two" class="cs-tab">
+            <div class="cs-product_tab cs-style1 cs-accent_20_bg_2">
+              <ul class="cs-details_list cs-style1 cs-mp0">
+                <li>
+                  <div class="cs-list_title"><span class="cs-medium cs-accent_color_2">Color</span></div>
+                  <div class="cs-list_text">Red</div>
+                </li>
+                <li>
+                  <div class="cs-list_title"><span class="cs-medium cs-accent_color_2">Size</span></div>
+                  <div class="cs-list_text">Large</div>
+                </li>
+                <li>
+                  <div class="cs-list_title"><span class="cs-medium cs-accent_color_2">Quantity</span></div>
+                  <div class="cs-list_text">
+                    <div class="cs-portfolio_tags">3 Pic</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cs-list_title"><span class="cs-medium cs-accent_color_2">Warranty</span></div>
+                  <div class="cs-list_text">2 years</div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .cs-tab -->
+          <div id="tab_three" class="cs-tab">
+            <div class="cs-product_tab cs-style1 cs-accent_20_bg_2">
+              <ol class="comment-list cs-type1">
+                <li class="comment">
+                  <div class="comment-body">
+                    <div class="comment-author vcard">
+                      <img class="avatar" src="{% static 'img/digital-agency/avatar2.jpg'%}" alt="Author"> 
+                      <span class="cs-medium cs-primary_color">George Steven</span>
+                    </div>
+                    <div class="comment-meta">Jan 24, 2022 at 9:59 am</div>
+                    <div class="cs-review" data-review="4.5">
+                      <div class="cs-review_in"></div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient </p>
+                  </div>
+                </li><!-- #comment-## -->
+                <li class="comment">
+                  <div class="comment-body">
+                    <div class="comment-author vcard">
+                      <img class="avatar" src="{% static 'img/digital-agency/avatar3.jpg'%}" alt="Author"> 
+                      <span class="cs-medium cs-primary_color">Jhon Doe</span>
+                    </div>
+                    <div class="comment-meta">Jan 24, 2022 at 9:59 am</div>
+                    <div class="cs-review" data-review="5">
+                      <div class="cs-review_in"></div>
+                    </div>
+                    <p>Awesome Theme 🙂</p>
+                  </div>
+                </li><!-- #comment-## -->
+              </ol>
+            </div>
+          </div><!-- .cs-tab -->
+        </div>
+      </div>
+    </div>
+    <div class="cs-height_140 cs-height_lg_80"></div>
+  </div>
+  <!-- End Product -->
+{% endblock %}
+ 

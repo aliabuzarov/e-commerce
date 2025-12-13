@@ -1,0 +1,23 @@
+# Use postgres/example user/password credentials
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    # set shared memory limit when using docker compose
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pgdb:/var/lib/postgresql/data
+    
+    environment:
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: '123456'
+      POSTGRES_DB: 'ecommerce'
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

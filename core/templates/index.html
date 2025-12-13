@@ -1,0 +1,672 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+  <title>E-commerce</title>
+{% endblock %}
+
+{% block content %}
+
+  <!-- Start Hero -->
+  <div class="cs-gray_bg">
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+      <div class="position-relative">
+        <div class="cs-slider_for">
+          <div class="cs-hero cs-style9 cs-center">
+            <div class="cs-hero_text">
+              <h1 class="cs-hero_title cs-medium text-uppercase">Trendy <br>Colorful <br><b
+                  class="cs-bold cs-accent_color_2">sneaker</b></h1>
+              <div class="cs-hero_price cs-medium cs-accent_color">$150.00</div>
+              <div class="cs-hero_btn">
+                <a href="#"
+                  class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg_2 cs-accent_border_2 cs-white cs-accent_bg_hover cs-white_hover cs-accent_border_hover">Add
+                  to Cart</a>
+              </div>
+            </div>
+            <div class="cs-hero_img">
+              <img src="{ static 'img/e-commerce/hero_lg_thumb_1.png'%}" alt="">
+            </div>
+          </div>
+          <div class="cs-hero cs-style9 cs-center">
+            <div class="cs-hero_text">
+              <h1 class="cs-hero_title cs-medium text-uppercase">Trendy <br>hand <br><b
+                  class="cs-bold cs-accent_color_2">watch</b></h1>
+              <div class="cs-hero_price cs-medium cs-accent_color">$120.00</div>
+              <div class="cs-hero_btn">
+                <a href="#"
+                  class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg_2 cs-accent_border_2 cs-white cs-accent_bg_hover cs-white_hover cs-accent_border_hover">Add
+                  to Cart</a>
+              </div>
+            </div>
+            <div class="cs-hero_img">
+              <img src="{% static 'img/e-commerce/hero_lg_thumb_2.png' %}" alt="">
+            </div>
+          </div>
+          <div class="cs-hero cs-style9 cs-center">
+            <div class="cs-hero_text">
+              <h1 class="cs-hero_title cs-medium text-uppercase">Trendy <br>Black <br><b
+                  class="cs-bold cs-accent_color_2">Hanbag</b></h1>
+              <div class="cs-hero_price cs-medium cs-accent_color">$10.00</div>
+              <div class="cs-hero_btn">
+                <a href="#"
+                  class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg_2 cs-accent_border_2 cs-white cs-accent_bg_hover cs-white_hover cs-accent_border_hover">Add
+                  to Cart</a>
+              </div>
+            </div>
+            <div class="cs-hero_img">
+              <img src="{% static 'img/e-commerce/hero_lg_thumb_3.png'%}" alt="">
+            </div>
+          </div>
+          <div class="cs-hero cs-style9 cs-center">
+            <div class="cs-hero_text">
+              <h1 class="cs-hero_title cs-medium text-uppercase">Trendy <br>Black <br><b
+                  class="cs-bold cs-accent_color_2">airphone</b></h1>
+              <div class="cs-hero_price cs-medium cs-accent_color">$150.00</div>
+              <div class="cs-hero_btn">
+                <a href="#"
+                  class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg_2 cs-accent_border_2 cs-white cs-accent_bg_hover cs-white_hover cs-accent_border_hover">Add
+                  to Cart</a>
+              </div>
+            </div>
+            <div class="cs-hero_img">
+              <img src="{% static 'img/e-commerce/hero_lg_thumb_4.png'%}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="cs-slider_nav">
+          <div class="cs-slider_mini_thumb cs-center cs-accent_40_border_2_hover"><img
+              src="{% static 'img/e-commerce/hero_sm_thumb_3.png'%}" alt="Thumb"></div>
+          <div class="cs-slider_mini_thumb cs-center cs-accent_40_border_2_hover"><img
+              src="{% static 'img/e-commerce/hero_sm_thumb_1.png'%}" alt="Thumb"></div>
+          <div class="cs-slider_mini_thumb cs-center cs-accent_40_border_2_hover"><img
+              src="{% static 'img/e-commerce/hero_sm_thumb_2.png'%}" alt="Thumb"></div>
+          <div class="cs-slider_mini_thumb cs-center cs-accent_40_border_2_hover"><img
+              src="{% static 'img/e-commerce/hero_sm_thumb_4.png'%}" alt="Thumb"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero -->
+
+  <!-- Start Featured Category -->
+  <div class="cs-height_135 cs-height_lg_75"></div>
+  <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+    <div class="cs-section_heading cs-style2 text-center cs-size2">
+      <div class="cs-section_subtitle">see amazing products</div>
+      <h2 class="cs-section_title cs-bold">Featured <b class="cs-accent_color_2">categories</b></h2>
+    </div>
+    <div class="cs-height_70 cs-height_lg_50"></div>
+  </div>
+  <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+    <div class="cs-slider cs-style1 cs-gap-30">
+      <div class="cs-slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+        data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="3"
+        data-add-slides="3">
+        <div class="cs-slider_wrapper">
+          <div class="cs-slide">
+            <a href="shop-left-sidebar.html" class="cs-product cs-style4">
+              <div class="cs-product_img cs-center cs-accent_10_bg_2"><img src="{% static 'img/e-commerce/product1.png'%}"
+                  alt=""></div>
+              <div class="cs-product_info">
+                <h2 class="cs-product_title cs-semi_bold cs-transition_3">Watch</h2>
+                <div class="cs-product_number cs-transition_3">20 items</div>
+                <div class="cs-product_info_bg cs-accent_bg_2 cs-transition_3"></div>
+              </div>
+            </a>
+          </div><!-- .cs-slide -->
+          <div class="cs-slide">
+            <a href="shop-left-sidebar.html" class="cs-product cs-style4">
+              <div class="cs-product_img cs-center cs-accent_10_bg_2"><img src="{% static 'img/e-commerce/product2.png'%}"
+                  alt=""></div>
+              <div class="cs-product_info">
+                <h2 class="cs-product_title cs-semi_bold cs-transition_3">Headset</h2>
+                <div class="cs-product_number cs-transition_3">15 items</div>
+                <div class="cs-product_info_bg cs-accent_bg_2 cs-transition_3"></div>
+              </div>
+            </a>
+          </div><!-- .cs-slide -->
+          <div class="cs-slide">
+            <a href="shop-left-sidebar.html" class="cs-product cs-style4">
+              <div class="cs-product_img cs-center cs-accent_10_bg_2"><img src="{% static 'img/e-commerce/product3.png'%}"
+                  alt=""></div>
+              <div class="cs-product_info">
+                <h2 class="cs-product_title cs-semi_bold cs-transition_3">Bags</h2>
+                <div class="cs-product_number cs-transition_3">50 items</div>
+                <div class="cs-product_info_bg cs-accent_bg_2 cs-transition_3"></div>
+              </div>
+            </a>
+          </div><!-- .cs-slide -->
+          <div class="cs-slide">
+            <a href="shop-left-sidebar.html" class="cs-product cs-style4">
+              <div class="cs-product_img cs-center cs-accent_10_bg_2"><img src="{% static 'img/e-commerce/product1.png'%}"
+                  alt=""></div>
+              <div class="cs-product_info">
+                <h2 class="cs-product_title cs-semi_bold cs-transition_3">Watch</h2>
+                <div class="cs-product_number cs-transition_3">20 items</div>
+                <div class="cs-product_info_bg cs-accent_bg_2 cs-transition_3"></div>
+              </div>
+            </a>
+          </div><!-- .cs-slide -->
+          <div class="cs-slide">
+            <a href="shop-left-sidebar.html" class="cs-product cs-style4">
+              <div class="cs-product_img cs-center cs-accent_10_bg_2"><img src="{% static 'img/e-commerce/product2.png'%}"
+                  alt=""></div>
+              <div class="cs-product_info">
+                <h2 class="cs-product_title cs-semi_bold cs-transition_3">Headset</h2>
+                <div class="cs-product_number cs-transition_3">15 items</div>
+                <div class="cs-product_info_bg cs-accent_bg_2 cs-transition_3"></div>
+              </div>
+            </a>
+          </div><!-- .cs-slide -->
+          <div class="cs-slide">
+            <a href="shop-left-sidebar.html" class="cs-product cs-style4">
+              <div class="cs-product_img cs-center cs-accent_10_bg_2"><img src="{% static 'img/e-commerce/product3.png'%}"
+                  alt=""></div>
+              <div class="cs-product_info">
+                <h2 class="cs-product_title cs-semi_bold cs-transition_3">Bags</h2>
+                <div class="cs-product_number cs-transition_3">50 items</div>
+                <div class="cs-product_info_bg cs-accent_bg_2 cs-transition_3"></div>
+              </div>
+            </a>
+          </div><!-- .cs-slide -->
+        </div>
+      </div><!-- .cs-slider_container -->
+      <div class="cs-slider_arrows cs-style3 cs-hidden_mobile">
+        <div class="cs-slider_arrows_in">
+          <div class="cs-left_arrow">
+            <div
+              class="cs-slider_arrow_in cs-center cs-accent_color cs-accent_15_bg_2 cs-accent_bg_hover cs-white_hover">
+              <i class="fas fa-long-arrow-alt-left"></i></div>
+          </div>
+          <div class="cs-right_arrow">
+            <div
+              class="cs-slider_arrow_in cs-center cs-accent_color cs-accent_15_bg_2 cs-accent_bg_hover cs-white_hover">
+              <i class="fas fa-long-arrow-alt-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-pagination cs-style1 cs-accent_color_2 cs-hidden_desktop"></div>
+    </div><!-- .cs-slider -->
+  </div>
+  <div class="cs-height_140 cs-height_lg_80"></div>
+  <!-- End Featured Category -->
+
+
+  <!-- Start Featured Product -->
+  <div class="cs-accent_10_bg_2">
+    <div class="cs-height_135 cs-height_lg_75"></div>
+    <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+      <div class="cs-section_heading cs-style4 cs-size2">
+        <div class="cs-section_heading_left">
+          <div class="cs-section_subtitle">Our Awesome products</div>
+          <h2 class="cs-section_title cs-bold">Featured <b class="cs-accent_color_2">products</b></h2>
+        </div>
+        <div class="cs-section_heading_right">
+          <a href="shop-right-sidebar.html"
+            class="cs-btn cs-style3 cs-btn_lg cs-primary_font cs-accent_color cs-medium">
+            <span class="cs-btn_text">View All Products</span>
+            <span class="cs-btn_icon cs-center"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="cs-height_80 cs-height_lg_60"></div>
+    </div>
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product6.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Black headphone</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$10.75</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <span class="cs-product_badge cs-accent_bg cs-white text-uppercase cs-medium">Sale</span>
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product4.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Black hand watch</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$20.50</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product7.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Blue wing chair</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$30.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product5.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Hand bag</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$15.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product8.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Black sneaker</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$15.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product9.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Hand bag</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$45.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product10.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Yellow wing chair</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$40.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <span class="cs-product_badge cs-accent_bg_2 cs-white text-uppercase cs-medium">New</span>
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product11.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Black hand watch</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$50.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+       Get Started     </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-height_110 cs-height_lg_50"></div>
+  </div>
+  <!-- End Featured Product -->
+
+  <div class="cs-height_140 cs-height_lg_80"></div>
+  <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+    <div class="cs-product_group_1">
+      <div class="cs-product cs-style2">
+        <div class="cs-product_bg cs-bg" data-src="{% static 'img/e-commerce/feature_product1.png'%}"></div>
+        <div class="cs-product_info cs-border_color">
+          <span class="cs-product_badge cs-white text-uppercase cs-medium">50% OFF</span>
+          <h2 class="cs-product_title text-uppercase cs-semi_bold">Blue watch</h2>
+          <div class="cs-product_price cs-white cs-semi_bold"><span class="cs-previous_price cs-normal">$100</span>$50
+          </div>
+          <a href="shop-right-sidebar.html"
+            class="cs-product_btn cs-accent_bg cs-white cs-white_bg_hover cs-accent_color_hover cs-rounded cs-medium">Shop
+            Now</a>
+        </div>
+      </div>
+      <div class="cs-product cs-style3 text-center">
+        <div class="cs-product_bg cs-bg" data-src="{% static 'img/e-commerce/feature_product3.png'%}"></div>
+        <div class="cs-product_info cs-border_color">
+          <h2 class="cs-product_title text-uppercase cs-semi_bold">Modern sneakers</h2>
+          <div class="cs-product_subtitle cs-medium cs-accent_color">Get discount of 25%</div>
+          <a href="shop-right-sidebar.html"
+            class="cs-product_btn cs-accent_bg_2 cs-white cs-white_bg_hover cs-accent_color_2_hover cs-rounded cs-medium">Shop
+            Now</a>
+        </div>
+      </div>
+      <div class="cs-product cs-style2 cs-type1">
+        <div class="cs-product_bg cs-bg" data-src="{% static 'img/e-commerce/feature_product2.png'%}"></div>
+        <div class="cs-product_info cs-border_color">
+          <span class="cs-product_badge cs-white text-uppercase cs-medium">50% OFF</span>
+          <h2 class="cs-product_title text-uppercase cs-semi_bold cs-white">Red Headset</h2>
+          <div class="cs-product_price cs-white cs-semi_bold"><span class="cs-previous_price cs-normal">$100</span>$50
+          </div>
+          <a href="shop-right-sidebar.html"
+            class="cs-product_btn cs-accent_bg_2 cs-white cs-white_bg_hover cs-accent_color_2_hover cs-rounded cs-medium">Shop
+            Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-height_140 cs-height_lg_80"></div>
+
+  <!-- Start New Arrivals -->
+  <div class="cs-accent_10_bg_2">
+    <div class="cs-height_135 cs-height_lg_75"></div>
+    <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+      <div class="cs-section_heading cs-style2 text-center cs-size2">
+        <div class="cs-section_subtitle">Very recent products</div>
+        <h2 class="cs-section_title cs-bold">New <b class="cs-accent_color_2">arrivals</b></h2>
+      </div>
+      <div class="cs-height_70 cs-height_lg_50"></div>
+    </div>
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <span class="cs-product_badge cs-accent_bg cs-white text-uppercase cs-medium">Sale</span>
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product4.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Black hand watch</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$20.50</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product5.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Hand bag</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$15.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product6.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Black headphone</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$10.75</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="cs-product cs-style1 cs-white_bg">
+            <div class="cs-product_thumb">
+              <a href="product-details.html" class="cs-product_img cs-center"><img
+                  src="{% static 'img/e-commerce/product7.png'%}" alt=""></a>
+              <div class="cs-product_toolbox cs-white_bg">
+                <div class="cs-product_toolbox_in cs-accent_15_bg_2">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                  <a href="#"><i class="fas fa-random"></i></a>
+                  <a href="#"><i class="far fa-eye"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs-product_info cs-border_color">
+              <h2 class="cs-product_title"><a href="product-details.html">Blue wing chair</a></h2>
+              <div class="cs-product_meta">
+                <div class="cs-product_price">$30.00</div>
+                <a href="#" class="cs-product_btn">
+                  <i class="fas fa-cart-plus"></i>
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-height_110 cs-height_lg_50"></div>
+  </div>
+  <!-- End New Arrivals -->
+
+  <!-- Start Blog Post -->
+  <div>
+    <div class="cs-height_135 cs-height_lg_75"></div>
+    <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+      <div class="cs-section_heading cs-style4 cs-size2">
+        <div class="cs-section_heading_left">
+          <div class="cs-section_subtitle">Our blog post</div>
+          <h2 class="cs-section_title cs-bold">Our latest <b class="cs-accent_color_2">articles</b> <br>and <b
+              class="cs-accent_color_2">articles</b></h2>
+        </div>
+        <div class="cs-section_heading_right">
+          <a href="blog.html"
+            class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg cs-accent_border cs-white cs-accent_bg_2_hover cs-white_hover cs-accent_border_2_hover">More
+            Articles</a>
+        </div>
+      </div>
+      <div class="cs-height_80 cs-height_lg_60"></div>
+    </div>
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="cs-post cs-style2">
+            <a href="blog-details.html" class="cs-post_thumb">
+              <div class="cs-post_thumb_in cs-bg" data-src="{% static 'img/online-education/post1.jpg'%}"></div>
+            </a>
+            <div class="cs-post_label">
+              <a href="#" class="cs-avatar">
+                <img src="{% static 'img/personal-portfolio/avatar1.png'%}" alt="#" class="cs-avatar_img">
+                <div class="cs-avatar_name">Candace Harris</div>
+              </a>
+              <div class="cs-post_date">03 Jan, 2022</div>
+            </div>
+            <h2 class="cs-post_title"><a href="blog-details.html">Super fast & user friendly interface.</a></h2>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4">
+          <div class="cs-post cs-style2">
+            <a href="blog-details.html" class="cs-post_thumb">
+              <div class="cs-post_thumb_in cs-bg" data-src="{% static 'img/online-education/post2.jpg'%}"></div>
+            </a>
+            <div class="cs-post_label">
+              <a href="#" class="cs-avatar">
+                <img src="{% static 'img/personal-portfolio/avatar2.png'%}" alt="#" class="cs-avatar_img">
+                <div class="cs-avatar_name">Pauline Moore</div>
+              </a>
+              <div class="cs-post_date">02 Jan, 2022</div>
+            </div>
+            <h2 class="cs-post_title"><a href="blog-details.html">20 most interesting UX design case study</a></h2>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div><!-- .col -->
+        <div class="col-lg-4">
+          <div class="cs-post cs-style2">
+            <a href="blog-details.html" class="cs-post_thumb">
+              <div class="cs-post_thumb_in cs-bg" data-src="{% static 'img/online-education/post3.jpg'%}">></div>
+            </a>
+            <div class="cs-post_label">
+              <a href="#" class="cs-avatar">
+                <img src="{% static 'img/personal-portfolio/avatar3.png'%}" alt="#" class="cs-avatar_img">
+                <div class="cs-avatar_name">Jonathon Doe</div>
+              </a>
+              <div class="cs-post_date">01 Jan, 2022</div>
+            </div>
+            <h2 class="cs-post_title"><a href="blog-details.html">How to grow a creaive digital agency?</a></h2>
+          </div>
+          <div class="cs-height_30 cs-height_lg_30"></div>
+        </div><!-- .col -->
+      </div>
+    </div>
+    <div class="cs-height_110 cs-height_lg_50"></div>
+    <div class="cs-height_175 cs-height_lg_175"></div>
+  </div>
+  <!-- End Blog Post -->
+
+  {% endblock %}
+
+  
