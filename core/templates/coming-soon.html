@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
-<head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Laralink">
-  <!-- Site Title -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
   <title>Comming Soon | E-commerce</title>
-  <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css'%}">
-  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css'%}">
-  <link rel="stylesheet" href="{% static 'css/plugins/animate.css'%}">
-  <link rel="stylesheet" href="{% static 'css/style.css'%}">
-  <!-- Theme Style -->
-  <link rel="stylesheet" href="{% static 'css/theme_9.css' %}">
-</head>
-
-<body>
-  <!-- Start Preloader -->
-  <div class="cs-preloader cs-accent_color_2 cs-white_bg">
-    <div class="cs-preloader_bg cs-center cs-accent_7_bg_2">
-      <div class="cs-preloader_in cs-accent_15_border_2">
-        <img src="{% static 'img/e-commerce/logo_mini.svg'%}" alt="Logo">
-      </div>
-    </div>
-  </div>
-  <!-- End Preloader -->
+{% endblock %}
+{% block content %}
   <div class="cs-comming_soon cs-style1 cs-center cs-accent_5_bg">
     <div class="cs-comming_soon_left">
       <div class="cs-comming_soon_img"><img src="{% static 'img/digital-agency/launching-project.svg'%}" alt=""></div>
@@ -66,10 +43,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Script -->
-  <script src="{% static 'js/plugins/jquery-3.6.0.min.js'%}"></script>
-  <script src="{% static 'js/plugins/wow.min.js'%}"></script>
-  <script src="{% static 'js/main.js'%}"></script>
-</body>
-</html>
+  {% endblock %}

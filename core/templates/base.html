@@ -163,8 +163,8 @@
                   <ul>
                     <li><a href="signin.html">Sign In</a></li>
                     <li><a href="signup.html">Sign Up</a></li>
-                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                    <li><a href="404.html">Error Page</a></li>
+                    <li><a href="{% url 'soon' %}">Coming Soon</a></li>
+                    <li><a href="{% url '404'%}">Error Page</a></li>
                   </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="blog.html">Blogs</a>
@@ -220,7 +220,7 @@
           <div class="cs-cta cs-style1 cs-type2 cs-accent_bg_2 cs-bg" data-src="{% static 'img/e-commerce/cta_img.png'%}">
             <h2 class="cs-cta_title cs-bold cs-white">Sign Up & <br>Get 10% Off</h2>
             <div class="cs-cta_btn">
-              <a href="shop-left-sidebar.html"
+              <a href="{% url 'details'%}"
                 class="cs-btn cs-style1 cs-medium cs-primary_font cs-accent_bg cs-accent_border cs-white cs-white_bg_hover cs-white_border_hover cs-rounded">Sign
                 Up Now</a>
             </div>
