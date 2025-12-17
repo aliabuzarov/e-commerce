@@ -72,7 +72,7 @@
                   <li><a href="#" class="cs-accent_color_2_hover cs-accent_10_bg_2_hover">Japanese</a></li>
                 </ul>
               </div>
-              <a href="signin.html" class="cs-icon_btn cs-accent_color_2_hover">
+              <a href="{% url 'signin'%}" class="cs-icon_btn cs-accent_color_2_hover">
                 <i class="far fa-user"></i>
                 <span>Login</span>
               </a>
@@ -159,15 +159,15 @@
                 <li class="menu-item-has-children"><a href="{% url 'product' %}">Shop</a>
 
                 </li>
-                <li class="menu-item-has-children"><a href="blog.html">Pages</a>
+                <li class="menu-item-has-children"><a href="{% url 'blog' %}">Pages</a>
                   <ul>
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="{% url 'signin' %}">Sign In</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
                     <li><a href="{% url 'soon' %}">Coming Soon</a></li>
                     <li><a href="{% url '404'%}">Error Page</a></li>
                   </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="blog.html">Blogs</a>
+                <li class="menu-item-has-children"><a href="{% url 'blog' %}">Blogs</a>
                   
                 </li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -176,7 +176,7 @@
           </div>
           <div class="cs-main_header_right">
             <div class="cs-action_box">
-              <a href="wish-list.html" class="cs-center position-relative cs-primary_color">
+              <a href="{% url 'wishlist' %}" class="cs-center position-relative cs-primary_color">
                 <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M22.2265 2.77351C21.6645 2.21126 20.9972 1.76524 20.2628 1.46093C19.5284 1.15663 18.7412 1 17.9463 1C17.1513 1 16.3641 1.15663 15.6297 1.46093C14.8953 1.76524 14.228 2.21126 13.666 2.77351L12.4997 3.93985L11.3334 2.77351C10.1982 1.63833 8.65854 1.00059 7.05315 1.00059C5.44775 1.00059 3.90811 1.63833 2.77293 2.77351C1.63774 3.9087 1 5.44834 1 7.05374C1 8.65913 1.63774 10.1988 2.77293 11.334L3.93926 12.5003L12.4997 21.0607L21.0602 12.5003L22.2265 11.334C22.7887 10.772 23.2348 10.1047 23.5391 9.37029C23.8434 8.63587 24 7.8487 24 7.05374C24 6.25877 23.8434 5.4716 23.5391 4.73718C23.2348 4.00277 22.7887 3.33551 22.2265 2.77351V2.77351Z"
@@ -184,7 +184,7 @@
                 </svg>
                 <span class="cs-action_count cs-white_bg text-center cs-accent_color">0</span>
               </a>
-              <a href="my-cart.html" class="cs-center position-relative cs-primary_color">
+              <a href="{% url 'cart' %}" class="cs-center position-relative cs-primary_color">
                 <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.1428 25C10.774 25 11.2857 24.4883 11.2857 23.8571C11.2857 23.226 10.774 22.7143 10.1428 22.7143C9.51166 22.7143 8.99998 23.226 8.99998 23.8571C8.99998 24.4883 9.51166 25 10.1428 25Z"
@@ -220,7 +220,7 @@
           <div class="cs-cta cs-style1 cs-type2 cs-accent_bg_2 cs-bg" data-src="{% static 'img/e-commerce/cta_img.png'%}">
             <h2 class="cs-cta_title cs-bold cs-white">Sign Up & <br>Get 10% Off</h2>
             <div class="cs-cta_btn">
-              <a href="{% url 'details'%}"
+              <a href="{% url 'signup'%}"
                 class="cs-btn cs-style1 cs-medium cs-primary_font cs-accent_bg cs-accent_border cs-white cs-white_bg_hover cs-white_border_hover cs-rounded">Sign
                 Up Now</a>
             </div>

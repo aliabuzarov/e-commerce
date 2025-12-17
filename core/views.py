@@ -11,4 +11,4 @@ def error(request):
     return render(request,'404.html')
 
 def coming_soon(request):
-    return render(request, 'comming-soon.html')
+    return render(request, 'coming-soon.html')
