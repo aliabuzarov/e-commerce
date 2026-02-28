@@ -3,7 +3,7 @@
 services:
 
   db:
-    image: postgres
+    image: postgres:16
     restart: always
     # set shared memory limit when using docker compose
     ports:

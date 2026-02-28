@@ -35,31 +35,44 @@
         <div class="cs-contact_right cs-accent_20_bg_2">
           <h4 class="cs-contact_title cs-semi_bold">Get In Touch</h4>
           <div class="cs-height_10 cs-height_lg_10"></div>
-          <form class="cs-contact_form">
+
+          <form class="cs-contact_form" method="post">
+            {% csrf_token %}
+            {% include 'includes/messages.html' %}
             <div class="row cs-row_gap_20">
               <div class="col-sm-6">
-                <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
-                  placeholder="First name">
+                <!-- <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
+                  placeholder="First name"> -->
+                  {{form.first_name}}
+                  {{form.first_name.errors}}
                 <div class="cs-height_20 cs-height_lg_20"></div>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
-                  placeholder="Last name">
+                <!-- <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
+                  placeholder="Last name"> -->
+                  {{form.last_name}}
+                  {{form.last_name.errors}}
                 <div class="cs-height_20 cs-height_lg_20"></div>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
+                <!-- <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
                   placeholder="Phone">
-                <div class="cs-height_20 cs-height_lg_20"></div>
+                <div class="cs-height_20 cs-height_lg_20"></div> -->
+                {{form.phone}}
+                {{form.phone.errors}}
               </div>
               <div class="col-sm-6">
-                <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
-                  placeholder="Email">
+                <!-- <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
+                  placeholder="Email"> -->
+                  {{form.email}}
+                  {{form.email.errors}}
                 <div class="cs-height_20 cs-height_lg_20"></div>
               </div>
               <div class="col-lg-12">
-                <textarea cols="30" rows="5" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
-                  placeholder="Your Message"></textarea>
+                <!-- <textarea cols="30" rows="5" class="cs-form_field cs-white_bg cs-accent_30_border_2 cs-primary_color"
+                  placeholder="Your Message"></textarea> -->
+                  {{form.message}}
+                  {{form.message.errors}}
                 <div class="cs-height_20 cs-height_lg_20"></div>
               </div>
               <div class="col-lg-12">
@@ -69,6 +82,7 @@
               </div>
             </div>
           </form>
+          
         </div>
       </div>
     </div>

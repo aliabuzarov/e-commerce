@@ -17,12 +17,11 @@
             <div class="cs-shop_widget cs-border_color">
               <h3 class="cs-shop_widget_title">Categories</h3>
               <ul class="menu">
-                <li><a href="#"><i class="fas fa-angle-right"></i>Sneakers(10)</a></li>
-                <li><a href="#"><i class="fas fa-angle-right"></i>Headset(5)</a></li>
-                <li><a href="#"><i class="fas fa-angle-right"></i>Hand Bag(7)</a></li>
-                <li><a href="#"><i class="fas fa-angle-right"></i>Wing Chair(4)</a></li>
-                <li><a href="#"><i class="fas fa-angle-right"></i>Smart Watch(11)</a></li>
-                <li><a href="#"><i class="fas fa-angle-right"></i>Watch(20)</a></li>
+                {% for category in categories%}
+
+                <li><a href="?category={{category.id}}"><i class="fas fa-angle-right"></i>{{category.name}}</a></li>
+                {% endfor %}
+                
               </ul>
             </div>
             <div class="cs-shop_widget cs-border_color">
@@ -74,10 +73,11 @@
           </div>
           <div class="cs-height_50 cs-height_lg_40"></div>
           <div class="row">
+            {% for product in products%}
             <div class="col-lg-4 col-sm-6">
               <div class="cs-product cs-style1 cs-white_bg">
                 <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product5.png" alt=""></a>
+                  <a href="{% url 'product' product.slug %}" class="cs-product_img cs-center"><img src="{{product.cover_image.url}}" alt=""></a>
                   <div class="cs-product_toolbox cs-white_bg">
                     <div class="cs-product_toolbox_in cs-accent_15_bg_2">
                       <a href="#"><i class="far fa-heart"></i></a>
@@ -87,10 +87,10 @@
                   </div>
                 </div>
                 <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Hand bag</a></h2>
+                  <h2 class="cs-product_title"><a href="{% url 'product' product.slug %}">{{product.title}}</a></h2>
                   <div class="cs-product_meta">
-                    <div class="cs-product_price">$15.00</div>
-                    <a href="#" class="cs-product_btn">
+                    <div class="cs-product_price">${{product.price}}</div>
+                    <a href="{% url 'product' product.slug %}" class="cs-product_btn">
                       <i class="fas fa-cart-plus"></i>
                       Buy Now
                     </a>
@@ -99,216 +99,21 @@
               </div>
               <div class="cs-height_30 cs-height_lg_30"></div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product6.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Black headphone</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$10.75</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product7.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Blue wing chair</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$30.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product9.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Hand bag</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$45.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product10.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Yellow wing chair</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$40.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <span class="cs-product_badge cs-accent_bg_2 cs-white text-uppercase cs-medium">New</span>
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product11.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Black hand watch</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$50.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product8.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Black sneaker</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$15.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product16.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Black headphone</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$40.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="cs-height_30 cs-height_lg_30"></div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="cs-product cs-style1 cs-white_bg">
-                <span class="cs-product_badge cs-accent_bg_2 cs-white text-uppercase cs-medium">New</span>
-                <div class="cs-product_thumb">
-                  <a href="#" class="cs-product_img cs-center"><img src="../assets/img/e-commerce/product17.png" alt=""></a>
-                  <div class="cs-product_toolbox cs-white_bg">
-                    <div class="cs-product_toolbox_in cs-accent_15_bg_2">
-                      <a href="#"><i class="far fa-heart"></i></a>
-                      <a href="#"><i class="fas fa-random"></i></a>
-                      <a href="#"><i class="far fa-eye"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs-product_info cs-border_color">
-                  <h2 class="cs-product_title"><a href="#">Yellow simple tshirt</a></h2>
-                  <div class="cs-product_meta">
-                    <div class="cs-product_price">$50.00</div>
-                    <a href="#" class="cs-product_btn">
-                      <i class="fas fa-cart-plus"></i>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
+            {% endfor %}
+            
+
               <div class="cs-height_30 cs-height_lg_30"></div>
             </div>
           </div>
           <div class="cs-height_60 cs-height_lg_30"></div>
           <div class="cs-post_pagination cs-style1 cs-with_round cs-medium">
             <ul class="page-numbers">
-              <li><span class="page-number current">1</span></li>
-              <li><a class="page-number" href="#">2</a></li>
-              <li><a class="page-number" href="#">3</a></li>
-              <li><a class="next page-number" href="#"><i class="fas fa-angle-right"></i></a></li>
+              {% for page in page_obj.paginator.page_range%}
+              <li><a class="page-number" href="?page={{page}}">{{page}} </a></li>
+              {% endfor %}
+              {% if page_obj.has_next%}
+              <li><a class="next page-number" href="?page={{ page_obj.next_page_number }}"><i class="fas fa-angle-right"></i></a></li>
+              {% endif %}
             </ul>
           </div>
         </div>

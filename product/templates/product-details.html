@@ -12,22 +12,22 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="cs-slider_for_1 cs-accent_20_bg_2">
-            <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_1.png'%}" alt=""></div>
+            <div class="cs-single_product_img"><img src="{{product.cover_image.url}}" alt=""></div>
             <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_2.png'%}" alt=""></div>
             <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_3.png'%}" alt=""></div>
             <div class="cs-single_product_img"><img src="{% static 'img/e-commerce/single_product_lg_4.png'%}" alt=""></div>
           </div>
           <div class="cs-slider_nav_1">
-            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_1.png'%}" alt="Thumb"></div>
-            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_2.png'%}" alt="Thumb"></div>
-            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_3.png'%}" alt="Thumb"></div>
-            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{% static 'img/e-commerce/single_product_sm_4.png'%}" alt="Thumb"></div>
+            {% for image in product.images.all %}
+
+            <div class="cs-slider_mini_thumb cs-center cs-accent_20_bg_2 cs-accent_40_border_hover"><img src="{image.image.url}" alt="Thumb"></div>
+            {% endfor %}
           </div>
         </div>
         <div class="col-lg-6">
           <div class="cs-height_50 cs-height_lg_40"></div>
           <div class="cs-product_details cs-style1">
-            <h2 class="cs-bold m-0">Bluetooth Headset</h2>
+            <h2 class="cs-bold m-0">{{product.title}}</h2>
             <div class="cs-height_10 cs-height_lg_10"></div>
             <div class="cs-product_review">
               <div class="cs-review" data-review="4.5">
@@ -38,9 +38,9 @@
             <div class="cs-height_10 cs-height_lg_10"></div>
             <hr class="w-50 cs-accent_20_bg_2">
             <div class="cs-height_25 cs-height_lg_25"></div>
-            <div class="cs-product_price cs-semi_bold cs-accent_color_2 cs-primary_font">$50 <span class="cs-previous cs-secondary_color">$100</span></div>
+            <div class="cs-product_price cs-semi_bold cs-accent_color_2 cs-primary_font">$50 <span class="cs-previous cs-secondary_color">{{product.price}}</span></div>
             <div class="cs-height_15 cs-height_lg_15"></div>
-            <div class="cs-product_desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
+            <div class="cs-product_desc">{{product.description | truncatewords:18}}</div>
             <div class="cs-height_25 cs-height_lg_25"></div>
             <hr class="w-50 cs-accent_20_bg_2">
             <div class="cs-height_30 cs-height_lg_30"></div>
@@ -113,30 +113,21 @@
             <div class="cs-product_tab cs-style1 cs-accent_20_bg_2">
               <ol class="comment-list cs-type1">
                 <li class="comment">
+                  {% for review in product.reviews.all %}
                   <div class="comment-body">
                     <div class="comment-author vcard">
                       <img class="avatar" src="{% static 'img/digital-agency/avatar2.jpg'%}" alt="Author"> 
-                      <span class="cs-medium cs-primary_color">George Steven</span>
+                      <span class="cs-medium cs-primary_color">{{review.user.username}}</span>
                     </div>
                     <div class="comment-meta">Jan 24, 2022 at 9:59 am</div>
                     <div class="cs-review" data-review="4.5">
                       <div class="cs-review_in"></div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient </p>
+                    <p> {{review.comment}}</p>
                   </div>
+                  {% endfor %}
                 </li><!-- #comment-## -->
                 <li class="comment">
-                  <div class="comment-body">
-                    <div class="comment-author vcard">
-                      <img class="avatar" src="{% static 'img/digital-agency/avatar3.jpg'%}" alt="Author"> 
-                      <span class="cs-medium cs-primary_color">Jhon Doe</span>
-                    </div>
-                    <div class="comment-meta">Jan 24, 2022 at 9:59 am</div>
-                    <div class="cs-review" data-review="5">
-                      <div class="cs-review_in"></div>
-                    </div>
-                    <p>Awesome Theme 🙂</p>
-                  </div>
                 </li><!-- #comment-## -->
               </ol>
             </div>

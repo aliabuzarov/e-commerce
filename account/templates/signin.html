@@ -13,16 +13,22 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <form class="cs-form cs-style1">
+          <form class="cs-form cs-style1" method="post">
+            {% csrf_token %}
+            {{form.non_field_errors}}
             <div class="cs-height_50 cs-height_lg_50"></div>
             <div class="cs-form_body">
               <h2 class="cs-form_title"><b class="cs-accent_color">Login</b> to Your Account</h2>
               <div class="cs-height_20 cs-height_lg_20"></div>
               <label class="cs-primary_color">E-mail*</label>
-              <input type="email" placeholder="User name or email" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required>
+              <!-- <input type="email" placeholder="User name or email" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required> -->
+               {{form.email}}
+               {{form.email.errors}}
               <div class="cs-height_30 cs-height_lg_30"></div>
               <label class="cs-primary_color">Password*</label>
-              <input type="password" placeholder="Password" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required>
+              <!-- <input type="password" placeholder="Password" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required> -->
+               {{form.password}}
+               {{form.password.errors}}
               <div class="cs-height_20 cs-height_lg_20"></div>
               <div class="cs-form_meta">
                 <div class="cs-checkbox">
@@ -38,7 +44,7 @@
             <hr class="cs-accent_30_bg_2">
             <div class="cs-height_20 cs-height_lg_20"></div>
             <div class="cs-form_footer text-center cs-medium cs-primary_color">
-              Don’t have an account? <a href="#" class="cs-accent_color_2">Sign Up</a>
+              Don’t have an account? <a href="{% url 'signup' %}" class="cs-accent_color_2">Sign Up</a>
             </div>
             <div class="cs-height_50 cs-height_lg_40"></div>
           </form>

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n tags%}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -153,24 +153,24 @@
             <div class="cs-nav">
               <ul class="cs-nav_list">
                 <li class="menu-item-has-children cs-mega-menu current-menu-item"><a
-                    href="{% url 'home' %}">Home</a>
+                    href="{% url 'home' %}">'{% trans 'Home'%}</a>
 
                 </li>
-                <li class="menu-item-has-children"><a href="{% url 'product' %}">Shop</a>
+                <li class="menu-item-has-children"><a href="{% url 'details' %}">{% trans 'Shop' %}</a>
 
                 </li>
-                <li class="menu-item-has-children"><a href="{% url 'blog' %}">Pages</a>
+                <li class="menu-item-has-children"><a href="">{% trans 'Pages'%}</a>
                   <ul>
-                    <li><a href="{% url 'signin' %}">Sign In</a></li>
-                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                    <li><a href="{% url 'soon' %}">Coming Soon</a></li>
-                    <li><a href="{% url '404'%}">Error Page</a></li>
+                    <li><a href="{% url 'signin' %}">{% trans 'Sign In'%}</a></li>
+                    <li><a href="{% url 'signup' %}">{% trans 'Sign Up'%}</a></li>
+                    <li><a href="{% url 'soon' %}">{% trans 'Coming Soon'%}</a></li>
+                    <li><a href="{% url '404'%}">{% trans 'Error Page' %}</a></li>
                   </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="{% url 'blog' %}">Blogs</a>
+                <li class="menu-item-has-children"><a href="{% url 'blog' %}">{% trans 'Blogs'%}</a>
                   
                 </li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'contact' %}">{% trans 'Contact'%}</a></li>
               </ul>
             </div>
           </div>
@@ -236,8 +236,9 @@
               <div class="cs-footer_newsletter_text">If you don’t want to miss any updates of our new template and
                 extension please subscribe to our newsletter.</div>
               <div class="cs-height_30 cs-height_lg_30"></div>
-              <form action="#" class="cs-footer_newsletter_form">
-                <input type="email" class="cs-footer_newsletter_input" placeholder="Enter your email">
+              <form action="#" class="cs-footer_newsletter_form" method="post" id="subscribeForm">
+                {% csrf_token %}
+                <input type="email" id="email" class="cs-footer_newsletter_input" placeholder="Enter your email">
                 <button class="cs-footer_newsletter_btn cs-white cs-accent_bg cs-accent_bg_2_hover cs-white_hover"><i
                     class="fas fa-paper-plane"></i></button>
               </form>
@@ -250,12 +251,11 @@
               <div class="cs-footer_item widget_nav_menu">
                 <h2 class="cs-widget_title cs-bold">Products</h2>
                 <ul class="menu">
-                  <li><a href="#">Smart Watch</a></li>
-                  <li><a href="#">Hand Bag</a></li>
-                  <li><a href="#">Furniture</a></li>
-                  <li><a href="#">Headphone</a></li>
-                  <li><a href="#">Sneakers</a></li>
-                </ul>
+                  {% get_products 4 as products %}
+                  {% for product in products %}
+                  <li><a href="#">{{product.title}}</a></li>
+                  {% endfor %}
+                  
               </div>
             </div><!-- .col -->
             <div class="col-md-4">
@@ -326,8 +326,8 @@
   <script src="{% static 'js/plugins/jquery.counter.min.js'%}"></script>
   <script src="{% static 'js/plugins/wow.min.js'%}"></script>
   <script src="{% static 'js/main.js'%}"></script>
-  {% block js%}
-
+  {% block js %}
+  <script src="{% static 'js/subscriber.js'%}"></script>
   {% endblock %}
 </body>
 

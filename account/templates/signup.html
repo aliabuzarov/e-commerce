@@ -11,19 +11,27 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <form class="cs-form cs-style1">
+          <form class="cs-form cs-style1" method="post">
+            {% csrf_token %}
+            {{form.non_field_errors}}
             <div class="cs-height_50 cs-height_lg_50"></div>
             <div class="cs-form_body">
-              <h2 class="cs-form_title"><b class="cs-accent_color">Signup</b> for new accountt</h2>
+              <h2 class="cs-form_title"><b class="cs-accent_color">Signup</b> for new account</h2>
               <div class="cs-height_20 cs-height_lg_20"></div>
               <label class="cs-primary_color">Your Name</label>
-              <input type="text" placeholder="User name or email" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required>
+              <!-- <input type="text" placeholder="User name or email" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required> -->
+              {{form.username}}
+              {{form.username.errors}}
               <div class="cs-height_30 cs-height_lg_30"></div>
               <label class="cs-primary_color">E-mail*</label>
-              <input type="email" placeholder="User name or email" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required>
+              <!-- <input type="email" placeholder="User name or email" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required> -->
+               {{form.email}}
+               {{form.email.errors}}
               <div class="cs-height_30 cs-height_lg_30"></div>
               <label class="cs-primary_color">Password*</label>
-              <input type="password" placeholder="Password" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required>
+              <!-- <input type="password" placeholder="Password" class="cs-form_field cs-accent_7_bg_2 cs-accent_10_border_2 cs-primary_color" required> -->
+               {{form.password}}
+               {{form.password.errors}}
               <div class="cs-height_35 cs-height_lg_35"></div>
               <button class="cs-btn cs-style1 cs-rounded cs-medium cs-primary_font cs-accent_bg_2 cs-accent_border_2 cs-white cs-accent_bg_hover cs-white_hover cs-accent_border_hover">Sign Up</button>
               <div class="cs-height_40 cs-height_lg_40"></div>
